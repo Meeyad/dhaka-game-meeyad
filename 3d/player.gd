@@ -29,6 +29,12 @@ func _physics_process(delta):
 	else:
 		y_velocity = 0
 	
+	if Input.is_action_pressed("coltoggle"):
+		pass
+	
+	
+	
+	
 	if Input.is_action_just_pressed("ui_cancel"):
 		get_tree().quit()
 	
@@ -36,3 +42,6 @@ func _physics_process(delta):
 	
 	velocity = lerp(velocity, speed * direction, delta * acceleration)
 	move_and_slide(velocity + Vector3.DOWN * y_velocity, Vector3.UP)
+
+
+
